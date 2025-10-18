@@ -1,0 +1,14 @@
+services:
+  prospectio-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: prospectio-landing
+    ports:
+      - "5173:80"
+    networks:
+      - prospectio-network
+
+networks:
+  prospectio-network:
+    driver: bridge
