@@ -21,8 +21,8 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="group">
-              Démarrer gratuitement (Bientôt disponible)
+            <Button variant="hero" size="lg" className="group" onClick={() => window.location.href = 'https://dev.prospectio.fr'}>
+              Démarrer gratuitement
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg">
