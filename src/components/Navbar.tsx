@@ -30,10 +30,10 @@ const Navbar = () => {
           </div>
           
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" onClick={() => window.location.href = 'https://dev.prospectio.fr'}>
               Connexion
             </Button>
-            <Button variant="hero" size="sm">
+            <Button variant="hero" size="sm" onClick={() => window.location.href = 'https://dev.prospectio.fr'}>
               Essai gratuit
             </Button>
           </div>
