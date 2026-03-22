@@ -37,8 +37,8 @@ const Stats = () => {
         </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <Card key={index} className="border-border hover:shadow-soft transition-smooth text-center">
+          {stats.map((stat) => (
+            <Card key={stat.label} className="border-border hover:shadow-soft transition-smooth text-center">
               <CardContent className="pt-8 pb-6">
                 <div className="text-5xl font-bold text-primary mb-2">
                   {stat.value}

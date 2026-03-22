@@ -12,7 +12,7 @@ const CTA = () => {
             Prêt à booster votre{" "}
             <span className="text-primary">
               prospection
-            </span>
+            </span>{" "}
             ?
           </h2>
           
@@ -21,7 +21,7 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="group" onClick={() => window.location.href = 'https://dev.prospectio.fr'}>
+            <Button variant="hero" size="lg" className="group" onClick={() => globalThis.location.href = 'https://dev.prospectio.fr'}>
               Démarrer gratuitement
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>

@@ -1,4 +1,4 @@
-import { Briefcase, Mail, Linkedin, Twitter } from "lucide-react";
+import { Briefcase } from "lucide-react";
 
 const Footer = () => {
   return (

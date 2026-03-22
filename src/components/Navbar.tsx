@@ -1,4 +1,3 @@
-import { Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/prospectio-logo.png";
 
@@ -30,10 +29,10 @@ const Navbar = () => {
           </div>
           
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" onClick={() => window.location.href = 'https://dev.prospectio.fr'}>
+            <Button variant="ghost" size="sm" onClick={() => globalThis.location.href = 'https://dev.prospectio.fr'}>
               Connexion
             </Button>
-            <Button variant="hero" size="sm" onClick={() => window.location.href = 'https://dev.prospectio.fr'}>
+            <Button variant="hero" size="sm" onClick={() => globalThis.location.href = 'https://dev.prospectio.fr'}>
               Essai gratuit
             </Button>
           </div>

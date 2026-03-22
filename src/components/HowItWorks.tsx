@@ -44,10 +44,10 @@ const HowItWorks = () => {
           {/* Connection lines for desktop */}
           <div className="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-primary to-primary opacity-20" style={{ width: '80%', marginLeft: '10%' }} />
           
-          {steps.map((step, index) => {
+          {steps.map((step) => {
             const Icon = step.icon;
             return (
-              <div key={index} className="relative text-center">
+              <div key={step.step} className="relative text-center">
                 <div className="inline-flex flex-col items-center">
                   <div className="relative mb-6">
                     <div className="w-20 h-20 rounded-full gradient-accent flex items-center justify-center shadow-medium z-10 relative">

@@ -48,11 +48,11 @@ const Features = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
+          {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={feature.title}
                 className="border-border hover:shadow-medium transition-smooth group cursor-pointer"
               >
                 <CardContent className="pt-6">
