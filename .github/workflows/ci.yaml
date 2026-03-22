@@ -1,0 +1,55 @@
+name: CI - Prospectio Landing
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: Build, Security & Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile || bun install
+
+      - name: Build check
+        run: bun run build
+
+      - name: Run tests with coverage
+        run: bun run test --coverage
+
+      - name: Trivy FS scan - Report (CRITICAL + HIGH + MEDIUM)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scan-ref: .
+          trivy-config: trivy.yaml
+          severity: CRITICAL,HIGH,MEDIUM
+          exit-code: "0"
+
+      - name: Trivy FS scan - Gate (CRITICAL)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scan-ref: .
+          trivy-config: trivy.yaml
+          severity: CRITICAL
+          exit-code: "1"
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
