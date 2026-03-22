@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Stats from "@/components/Stats";
-import CTA from "@/components/CTA";
+import CallToAction from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,7 +14,7 @@ const Index = () => {
       <Features />
       <HowItWorks />
       <Stats />
-      <CTA />
+      <CallToAction />
       <Footer />
     </div>
   );
