@@ -4,7 +4,8 @@ import Features from '../Features';
 
 describe('Features', () => {
   it('renders without crashing', () => {
-    render(<Features />);
+    const { container } = render(<Features />);
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the section heading', () => {

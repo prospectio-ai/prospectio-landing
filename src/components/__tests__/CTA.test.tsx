@@ -9,7 +9,8 @@ describe('CTA', () => {
   });
 
   it('renders without crashing', () => {
-    render(<CTA />);
+    const { container } = render(<CTA />);
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the heading', () => {

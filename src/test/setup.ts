@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 
 // Mock window.matchMedia for jsdom (used by sonner, etc.)
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(globalThis, 'matchMedia', {
   writable: true,
   value: (query: string) => ({
     matches: false,

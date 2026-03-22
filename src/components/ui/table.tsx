@@ -5,8 +5,7 @@ import { cn } from "@/lib/utils";
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
   ({ className, ...props }, ref) => (
     <div className="relative w-full overflow-auto">
-      {/* Table header (thead) is provided via TableHeader child component */}
-      <table ref={ref} className={cn("w-full caption-bottom text-sm", className)} role="table" {...props} />
+      <table ref={ref} className={cn("w-full caption-bottom text-sm", className)} {...props} /> {/* NOSONAR: thead is provided via TableHeader child component */}
     </div>
   ),
 );

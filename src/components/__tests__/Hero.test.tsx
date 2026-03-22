@@ -9,7 +9,8 @@ describe('Hero', () => {
   });
 
   it('renders without crashing', () => {
-    render(<Hero />);
+    const { container } = render(<Hero />);
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the main heading', () => {

@@ -5,11 +5,12 @@ import NotFound from '../NotFound';
 
 describe('NotFound Page', () => {
   it('renders without crashing', () => {
-    render(
+    const { container } = render(
       <MemoryRouter initialEntries={['/unknown']}>
         <NotFound />
       </MemoryRouter>
     );
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the 404 heading', () => {

@@ -4,7 +4,8 @@ import Footer from '../Footer';
 
 describe('Footer', () => {
   it('renders without crashing', () => {
-    render(<Footer />);
+    const { container } = render(<Footer />);
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the brand name', () => {

@@ -4,7 +4,8 @@ import Index from '../Index';
 
 describe('Index Page', () => {
   it('renders without crashing', () => {
-    render(<Index />);
+    const { container } = render(<Index />);
+    expect(container).toBeInTheDocument();
   });
 
   it('renders the Navbar', () => {

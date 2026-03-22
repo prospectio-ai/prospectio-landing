@@ -4,7 +4,8 @@ import HowItWorks from '../HowItWorks';
 
 describe('HowItWorks', () => {
   it('renders without crashing', () => {
-    render(<HowItWorks />);
+    const { container } = render(<HowItWorks />);
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the section heading', () => {

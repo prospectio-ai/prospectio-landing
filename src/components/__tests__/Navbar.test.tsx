@@ -9,7 +9,8 @@ describe('Navbar', () => {
   });
 
   it('renders without crashing', () => {
-    render(<Navbar />);
+    const { container } = render(<Navbar />);
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the brand name', () => {

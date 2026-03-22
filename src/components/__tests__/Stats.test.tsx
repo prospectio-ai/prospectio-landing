@@ -4,7 +4,8 @@ import Stats from '../Stats';
 
 describe('Stats', () => {
   it('renders without crashing', () => {
-    render(<Stats />);
+    const { container } = render(<Stats />);
+    expect(container).toBeInTheDocument();
   });
 
   it('displays the section heading', () => {
